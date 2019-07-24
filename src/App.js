@@ -1,26 +1,29 @@
-import React from 'react';
+import React,{useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Team from './components/Team';
+import Form from './components/Form'
+import { Form as SemForm } from 'semantic-ui-react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+export default function App(props) {
+  const [members, setMembers] = useState([
+    
+  ]);
+
+
+  
+  return(
+    <div>
+      <div>
+    <Form saveUser={setMembers} />
+        {members.map((team, index) => (
+          <Team
+          key={index}
+          index={index}
+          team={team.text}
+          />
+        ))}
+      </div>
     </div>
-  );
+  )
 }
-
-export default App;

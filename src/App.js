@@ -33,7 +33,7 @@ const App = () => {
 	const editRow = member => {
 		setEditing(true)
 
-		setCurrentUser({ id: member.id, name: member.name, email: member.email })
+		setCurrentUser({ id: member.id, name: member.name, email: member.email, role: member.role })
 	}
 
 	return (

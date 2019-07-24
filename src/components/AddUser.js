@@ -22,7 +22,7 @@ const AddUser = props => {
 			<label>Email</label>
 			<input type="text" name="email" value={member.email} onChange={handleInputChange} />
 			<label>Role</label>
-			<select value={member.role} onChange={handleInputChange}>
+			<select name="role" value={member.role} onChange={handleInputChange}>
 				<option>Select your role</option>
 				<option>Full Stack Developer</option>
 				<option>UI Developer</option>
